@@ -7,7 +7,7 @@ INNER JOIN LIBRARY_BRANCH LB ON BC.BranchId=LB.BranchId and LB.BranchName = "Sha
 2.	How many copies of 	the book titled The Lost Tribe are owned by each library branch?
 SELECT BC.BranchId, count(BOOK_COPIES.No_Of_Copies)
 FROM BOOK_COPIES BC
-INNER JOIN BOOK B ON BC.BookId=BOOK.BookId and B.Title="The Lost Tribe"
+INNER JOIN BOOK B ON BC.BookId=B.BookId and B.Title="The Lost Tribe"
 GROUP BY BC.BranchId;
 
 3.	Retrieve the names 	of all borrowers who do not have any books checked out .
